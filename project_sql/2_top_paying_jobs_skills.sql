@@ -37,24 +37,3 @@ inner join skills_dim on skills_dim.skill_id = skills_job_dim.skill_id
 order BY salary_year_avg desc
 limit 10
 
-
-
-
-
-select skills_dim.skills,
-       skill_count.total_skills
-from skills_dim
-left join skill_count on skill_count.skill_id =  skills_dim.skill_id 
-order by total_skills desc
-limit 5
-
-
-select
-    skills.skill_id,
-    skills as skill_name,
-    skill_count
-from remote_job_skills
-inner join skills_dim as skills on skills.skill_id = remote_job_skills.skill_id
-order by 
-    skill_count desc
-limit 5
