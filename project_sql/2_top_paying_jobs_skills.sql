@@ -21,8 +21,8 @@ with top_paying_jobs as (
     left join company_dim on company_dim.company_id = job_postings_fact.company_id
     where 
         salary_year_avg is not null and
-        job_title_short = 'Data Analyst' AND
-        job_location = 'Anywhere'
+        (job_location = 'Philadelphia' or
+        job_location = 'New York, NY')
     order by 
         salary_year_avg desc
 )
