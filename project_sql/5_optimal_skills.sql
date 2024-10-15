@@ -28,4 +28,4 @@ having
     count(skills_job_dim.job_id)  > 10
 order by 
     demand_count desc, salary_avg desc
-limit 25 
+limit 10 

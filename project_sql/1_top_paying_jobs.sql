@@ -23,8 +23,8 @@ left join company_dim on company_dim.company_id = job_postings_fact.company_id
 where 
     salary_year_avg is not null and
     job_title_short = 'Data Analyst' AND
-    job_location = 'Philadelphia, PA' or
-    job_location = 'New York, NY'
+    ( job_location = 'Philadelphia, PA' or
+    job_location = 'New York, NY' )
 order by 
     salary_year_avg desc
-limit 10
+limit 50
